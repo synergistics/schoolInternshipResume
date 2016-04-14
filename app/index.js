@@ -35,6 +35,7 @@ var CmdBox = React.createClass({
         type: "text",
         "className": "cmdLine",
         "onKeyUp": this.props.handleKeyUp,
+        disabled: this.props.disabled,
         autoFocus: true,
         autoComplete: "off"
       }),
@@ -55,6 +56,7 @@ var Terminal = React.createClass({
       count: 0,
       items: [
         {
+          disabled: false,
           id: "entry0",
           handleKeyUp: this.handleKeyUp,
           outputText: ""
@@ -73,6 +75,7 @@ var Terminal = React.createClass({
       }
 
       var current = this.state.items[this.state.count];
+      current.disabled = true;
       current.outputText = getOutput(command);
 
       this.setState({
@@ -80,6 +83,7 @@ var Terminal = React.createClass({
         count: this.state.count+1,
 
         items: this.state.items.concat([{
+          disabled: false,
           id: "entry"+this.state.items.length,
           handleKeyUp: this.handleKeyUp,
           outputText: "" 
@@ -102,16 +106,16 @@ var Terminal = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(Terminal), document.querySelector(".terminal"))
+ReactDOM.render(React.createElement(Terminal), document.querySelector(".terminal"));
 
 function toTitleCase(str){
     return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
 }
 
 function openPanel(str){
-  $(".content").find(".heading").text(toTitleCase(str))
-  $(".content").children().not(".heading").css("display", "none")
-  $(".content").find(".heading").css("display", "block")
+  $(".content").find(".heading").text(toTitleCase(str));
+  $(".content").children().not(".heading").css("display", "none");
+  $(".content").find(".heading").css("display", "block");
   $(".content").find("."+str).css("display", "block");
 }
 

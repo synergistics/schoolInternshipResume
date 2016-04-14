@@ -2,7 +2,7 @@
 A little resume for a school computer internship.
 
 ### What's going on?
-I'm applying for an internship. I was writing my resume, watching the bland text drag across the even blander paper in an attempt to convice those who read this resume of my ability to, quite stereotypically, "get the job done." I grew bored, so I decided to make this thing to give to the interviewers instead.
+I'm applying for an internship. While writing my resume, I watched the bland text drag across the even blander paper in an attempt to convice those who read this resume of my ability to, quite stereotypically, "get the job done." I grew bored, so I decided to make this thing to give to the interviewers instead.
 
 ### Getting the code
 In your terminal, run the following

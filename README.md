@@ -20,6 +20,6 @@ npm start
 ```
 Now just navigate your way over to your favorite browser (this probably doesn't work well in IE) and go to `localhost:3000`.
 
-### If you don't feel like installing extra software...
+### If you don't feel like installing extra software
 You should be able to just clone the repo (using that first command I gave you above).
 Unzip the repo and navigate to the app folder in your file explorer. Then just double click the index.html file to get going!
